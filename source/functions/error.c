@@ -10,8 +10,7 @@
 
 #include "my.h"
 
-int	my_puterror(char *str)
-{
-  write(2, str, strlen(str));
-  return (84);
+int	my_puterror(char *str) {
+    write(2, str, strlen(str));
+    return (84);
 }

@@ -10,87 +10,71 @@
 
 #include "my.h"
 
-int	my_get_color(char *str, int min)
-{
-  int	nbr;
-  int	i;
-  int	n;
+int my_get_color(char *str, int min) {
+    int nbr = 0;
+    int i = 7;
+    int n = 2;
 
-  nbr = 0;
-  i = 7;
-  n = 2;
-  while (i >= 0)
-    {
-      nbr += str[i + min] * pow(10, n);
-      i += 1;
-      n -= 1;
+    while (i >= 0) {
+        nbr += str[i + min] * pow(10, n);
+        i += 1;
+        n -= 1;
     }
-  return (nbr);
+    return (nbr);
 }
 
-void		my_print_image(t_my_framebuffer *framebuffer,
-			       char *buffer, int x, int y)
-{
-  sfColor       color;
+void my_print_image(t_my_framebuffer *framebuffer,
+                    char *buffer, int x, int y) {
+    sfColor color;
 
-  color.r = buffer[0];
-  color.g = buffer[1];
-  color.b = buffer[2];
-  color.a = buffer[3];
-  if (color.a > 150)
-    my_put_pixel(framebuffer, x, y, color);
+    color.r = buffer[0];
+    color.g = buffer[1];
+    color.b = buffer[2];
+    color.a = buffer[3];
+    if (color.a > 150)
+        my_put_pixel(framebuffer, x, y, color);
 }
 
-int		my_draw_image(t_my_framebuffer *framebuffer, char *name,
-			      sfVector2i size, sfVector2i pos)
-{
-  int		fd;
-  char		buffer[5];
-  int		x;
-  int		y;
+int my_draw_image(t_my_framebuffer *framebuffer, char *name,
+                  sfVector2i size, sfVector2i pos) {
+    int fd = open(name, O_RDONLY);;
+    char buffer[5];
+    int x;
+    int y = 0;
 
-  y = 0;
-  fd = open(name, O_RDONLY);
-  if (fd == -1)
-    return (84);
-  while (y < size.y)
-    {
-      x = 0;
-      while (x < size.x)
-	{
-	  read(fd, buffer, 4);
-	  my_print_image(framebuffer, buffer, x + pos.x, y + pos.y);
-	  x += 1;
-	}
-      y += 1;
-    }
-  close(fd);  
-  return (0);
-}
-
-int             my_draw_inv_image(t_my_framebuffer *framebuffer, char *name,
-				  sfVector2i size, sfVector2i pos)
-{
-  int           fd;
-  char          buffer[5];
-  int           x;
-  int           y;
-
-  y = 0;
-  fd = open(name, O_RDONLY);
-  if (fd == -1)
-    return (84);
-  while (y < size.y)
-    {
-      x = 0;
-      while (x < size.x)
-	{
-          read(fd, buffer, 4);
-          my_print_image(framebuffer, buffer, y + pos.y, x + pos.x);
-          x += 1;
+    if (fd == -1)
+        return (84);
+    while (y < size.y) {
+        x = 0;
+        while (x < size.x) {
+            read(fd, buffer, 4);
+            my_print_image(framebuffer, buffer, x + pos.x, y + pos.y);
+            x += 1;
         }
-      y += 1;
+        y += 1;
     }
-  close(fd);
-  return (0);
+    close(fd);
+    return (0);
+}
+
+int my_draw_inv_image(t_my_framebuffer *framebuffer, char *name,
+                      sfVector2i size, sfVector2i pos) {
+    int fd = open(name, O_RDONLY);
+    char buffer[5];
+    int x;
+    int y = 0;
+
+    if (fd == -1)
+        return (84);
+    while (y < size.y) {
+        x = 0;
+        while (x < size.x) {
+            read(fd, buffer, 4);
+            my_print_image(framebuffer, buffer, y + pos.y, x + pos.x);
+            x += 1;
+        }
+        y += 1;
+    }
+    close(fd);
+    return (0);
 }

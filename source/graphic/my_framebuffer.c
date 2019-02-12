@@ -10,20 +10,17 @@
 
 #include "my.h"
 
-t_my_framebuffer	*my_framebuffer_create(int width, int height)
-{
-  int			i;
-  t_my_framebuffer	*buffer;
+t_my_framebuffer *my_framebuffer_create(int width, int height) {
+    int i = 0;
+    t_my_framebuffer *buffer;
 
-  buffer = malloc(sizeof(t_my_framebuffer));
-  buffer->width = width;
-  buffer->height = height;
-  buffer->pixels = malloc(sizeof(sfColor) * width * height);
-  i = 0;
-  while (i < width * height * 4)
-    {
-      buffer->pixels[i] = 0;
-      i = i + 1;
+    buffer = malloc(sizeof(t_my_framebuffer));
+    buffer->width = width;
+    buffer->height = height;
+    buffer->pixels = malloc(sizeof(sfColor) * width * height);
+    while (i < width * height * 4) {
+        buffer->pixels[i] = 0;
+        i = i + 1;
     }
-  return (buffer);
+    return (buffer);
 }

@@ -10,36 +10,29 @@
 
 #include "my.h"
 
-char	*to_char(char *str, sfVector2i pos)
-{
-  str[0] = pos.x + '0';
-  str[1] = pos.y + '0';
-  return (str);
+char *to_char(char *str, sfVector2i pos) {
+    str[0] = pos.x + '0';
+    str[1] = pos.y + '0';
+    return (str);
 }
 
-sfVector2i	to_pos(char *str)
-{
-  sfVector2i	pos;
+sfVector2i to_pos(char *str) {
+    sfVector2i pos;
 
-  pos.x = str[0] - '0';
-  pos.y = str[1] - '0';
-  return (pos);
+    pos.x = str[0] - '0';
+    pos.y = str[1] - '0';
+    return (pos);
 }
 
-int	to_int(char *str, int max)
-{
-  int	i;
-  int	nbr;
-  int	pow;
+int to_int(char *str, int max) {
+    int i = max;
+    int nbr = 0;
+    int pow = 1;
 
-  nbr = 0;
-  pow = 1;
-  i = max;
-  while (i >= 0)
-    {
-      nbr = nbr + ((str[i] - '0') * pow);
-      pow *= 10;
-      i -= 1;
+    while (i >= 0) {
+        nbr = nbr + ((str[i] - '0') * pow);
+        pow *= 10;
+        i -= 1;
     }
-  return (nbr);
+    return (nbr);
 }

@@ -10,47 +10,36 @@
 
 #include "my.h"
 
-void	location_x_ships(char **map, t_ships *ships)
-{
-  int	x;
-  int	y;
+void location_x_ships(char **map, t_ships *ships) {
+    int x = ships->pos.x;
+    int y = ships->pos.y;
 
-  x = ships->pos.x;
-  y = ships->pos.y;
-  while (x < ships->pos.x + ships->range)
-    {
-      if (map[y][x] == 'x')
-	ships->state[x - ships->pos.x] = 1;
-      x += 1;
+    while (x < ships->pos.x + ships->range) {
+        if (map[y][x] == 'x')
+            ships->state[x - ships->pos.x] = 1;
+        x += 1;
     }
 }
 
-void	location_y_ships(char **map, t_ships *ships)
-{
-  int	x;
-  int	y;
+void location_y_ships(char **map, t_ships *ships) {
+    int x = ships->pos.x;
+    int y = ships->pos.y;
 
-  x = ships->pos.x;
-  y = ships->pos.y;
-  while	(y < ships->pos.y + ships->range)
-    {
-      if (map[y][x] == 'x')
-        ships->state[y - ships->pos.y] = 1;
-      y	+= 1;
+    while (y < ships->pos.y + ships->range) {
+        if (map[y][x] == 'x')
+            ships->state[y - ships->pos.y] = 1;
+        y += 1;
     }
 }
 
-void	my_update_ships(char **map, t_ships **ships)
-{
-  int	i;
+void my_update_ships(char **map, t_ships **ships) {
+    int i = 0;
 
-  i = 0;
-  while (i < 3)
-    {
-      if (ships[i]->direction == 'x')
-	location_x_ships(map, ships[i]);
-      else
-	location_y_ships(map, ships[i]);
-      i += 1;
+    while (i < 3) {
+        if (ships[i]->direction == 'x')
+            location_x_ships(map, ships[i]);
+        else
+            location_y_ships(map, ships[i]);
+        i += 1;
     }
 }
