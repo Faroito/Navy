@@ -122,7 +122,7 @@ int		main(int ac, char **av)
   if (play_music(ac, av) == 1)
     {
       music_off = 0;
-      music = sfMusic_createFromFile("Music/Music.ogg");
+      music = sfMusic_createFromFile("music/music.ogg");
       sfMusic_play(music);
     }
   init_for_menu();

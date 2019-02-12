@@ -77,7 +77,7 @@ int             guest_click(t_my_framebuffer *framebuffer,
     {
       socket = malloc(sizeof(t_socket));
       stop = 1;
-      socket->sock = to_int(text->port, my_strlen(text->port));
+      socket->sock = to_int(text->port, strlen(text->port));
       if ((socket->sock = init_client(text->ip, socket->sock)) == 84)
         {
           set_background(framebuffer, "image/background/error_guest.raw");

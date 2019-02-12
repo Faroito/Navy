@@ -36,7 +36,7 @@ void		mouse_position(sfRenderWindow *window, t_maps *maps,
     {
       if (music_off == 0)
 	{
-	  music = sfMusic_createFromFile("Music/fire.ogg");
+	  music = sfMusic_createFromFile("music/fire.ogg");
 	  sfMusic_play(music);
 	}
       if (maps->random_map[mouse.y][mouse.x] != '.')

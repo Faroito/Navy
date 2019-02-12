@@ -80,7 +80,7 @@ void            mouse_position_multi(sfRenderWindow *window, t_maps *maps,
     {
       if (music_off == 0)
 	{
-	  music = sfMusic_createFromFile("Music/fire.ogg");
+	  music = sfMusic_createFromFile("music/fire.ogg");
 	  sfMusic_play(music);
 	}
       multi_attack(framebuffer, window, maps, ships, socket, mouse);

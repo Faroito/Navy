@@ -43,7 +43,7 @@ RM		=       rm -f
 
 GCC		=       gcc -o
 
-LIB		=       -lc_graph_prog -lm -L./lib -lmy
+LIB		=       -lcsfml-window -lcsfml-system -lcsfml-audio -lcsfml-graphics -lm
 
 all:    $(NAME)
 

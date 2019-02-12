@@ -12,6 +12,6 @@
 
 int	my_puterror(char *str)
 {
-  write(2, str, my_strlen(str));
+  write(2, str, strlen(str));
   return (84);
 }

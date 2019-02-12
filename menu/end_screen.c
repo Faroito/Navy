@@ -43,10 +43,10 @@ void			end_screen(t_my_framebuffer *framebuffer,
   my_draw_image(framebuffer, name, size, pos);
   if (music_off == 0)
     {
-      if (my_strcmp(name, "image/background/victory.raw") == 0)
-	music = sfMusic_createFromFile("Music/Win.ogg");
+      if (strcmp(name, "image/background/victory.raw") == 0)
+	music = sfMusic_createFromFile("music/Win.ogg");
       else
-	music = sfMusic_createFromFile("Music/Lose.ogg");
+	music = sfMusic_createFromFile("music/Lose.ogg");
       sfMusic_play(music);
     }
   while (sfRenderWindow_isOpen(window))

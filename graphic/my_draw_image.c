@@ -21,7 +21,7 @@ int	my_get_color(char *str, int min)
   n = 2;
   while (i >= 0)
     {
-      nbr += str[i + min] * my_power_rec(10, n);
+      nbr += str[i + min] * pow(10, n);
       i += 1;
       n -= 1;
     }

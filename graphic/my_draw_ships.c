@@ -42,7 +42,7 @@ char	*ships_name(t_ships *ships, char color)
   int	i;
 
   i = 0;
-  name = malloc(ships->range + my_strlen("image/bs/.raw0"));
+  name = malloc(ships->range + strlen("image/bs/.raw0"));
   my_str_compact(name, "image/", 0);
   name[6] = color;
   if (ships->range == 2)
@@ -105,7 +105,7 @@ void		my_draw_on_map(t_my_framebuffer *framebuffer,
     {
       if (music_off == 0)
 	{
-	  music = sfMusic_createFromFile("Music/enemy.ogg");
+	  music = sfMusic_createFromFile("music/enemy.ogg");
 	  sfMusic_play(music);
 	}
       my_draw_image(framebuffer, "image/cross.raw", size, pos);
@@ -114,7 +114,7 @@ void		my_draw_on_map(t_my_framebuffer *framebuffer,
     {
       if (music_off == 0)
 	{
-	  music = sfMusic_createFromFile("Music/void.ogg");
+	  music = sfMusic_createFromFile("music/void.ogg");
 	  sfMusic_play(music);
 	}
       my_draw_image(framebuffer, "image/round.raw", size, pos);

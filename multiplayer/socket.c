@@ -12,7 +12,7 @@
 
 void	my_send(int sock, char *msg)
 {
-  send(sock, msg, my_strlen(msg), 0);
+  send(sock, msg, strlen(msg), 0);
 }
 
 char	*my_receive(int sock)
