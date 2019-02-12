@@ -39,10 +39,4 @@
 #include "navy.h"
 #include "graphic.h"
 
-int	my_strlen(char *str);
-int	my_getnbr(char *str);
-int	my_power_rec(int nb, int power);
-int	my_square_root(int nb);
-int	my_strcmp(char *s1, char *s2);
-
 #endif /* !MY_H_ */

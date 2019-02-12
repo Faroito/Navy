@@ -8,7 +8,7 @@
 ** Last update Mon Feb 13 12:54:38 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 sfRenderWindow		*create_window(int width, int height, char *name)
 {

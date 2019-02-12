@@ -8,7 +8,7 @@
 ** Last update Fri Feb  3 15:08:46 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 int	my_puterror(char *str)
 {

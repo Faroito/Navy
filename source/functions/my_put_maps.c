@@ -8,7 +8,7 @@
 ** Last update Sun Feb  5 21:04:12 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 int     malloc_map(char **map)
 {

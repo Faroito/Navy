@@ -8,7 +8,7 @@
 ** Last update Sun Feb  5 15:54:23 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 t_vector	move_forward(t_vector coord)
 {

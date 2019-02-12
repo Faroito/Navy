@@ -8,7 +8,7 @@
 ** Last update Sun Feb  5 12:10:17 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 char    *pos_ships_name(int range, char color)
 {

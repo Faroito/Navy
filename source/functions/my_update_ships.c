@@ -8,7 +8,7 @@
 ** Last update Sun Feb  5 22:54:55 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void	location_x_ships(char **map, t_ships *ships)
 {

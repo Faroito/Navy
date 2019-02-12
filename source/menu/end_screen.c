@@ -8,7 +8,7 @@
 ** Last update Thu Feb  9 12:30:27 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void	mouse_end_screen(sfRenderWindow *window, sfEvent event)
 {

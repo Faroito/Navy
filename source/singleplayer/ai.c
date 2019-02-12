@@ -8,7 +8,7 @@
 ** Last update Tue Feb  7 13:02:40 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 int	destroy_ship(t_data *data)
 {

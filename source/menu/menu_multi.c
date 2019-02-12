@@ -8,7 +8,7 @@
 ** Last update Mon Feb 13 12:59:11 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void            confirm_pos_multi(t_my_framebuffer *framebuffer, sfRenderWindow *window,
 				  char **map, t_ships **ships, char color, t_socket *socket)

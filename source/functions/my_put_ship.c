@@ -8,7 +8,7 @@
 ** Last update Sun Feb  5 17:10:42 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void            map_clear(char **map, char chr)
 {

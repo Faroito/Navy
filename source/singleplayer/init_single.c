@@ -8,7 +8,7 @@
 ** Last update Mon Feb 13 13:17:15 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 t_ships		**ships_malloc()
 {

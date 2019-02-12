@@ -8,7 +8,7 @@
 ** Last update Thu Feb  9 11:52:35 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 int	music_off;
 

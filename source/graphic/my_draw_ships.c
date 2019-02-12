@@ -8,7 +8,7 @@
 ** Last update Thu Feb  9 12:28:58 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void	set_background(t_my_framebuffer *framebuffer, char *name)
 {

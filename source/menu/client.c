@@ -8,7 +8,7 @@
 ** Last update Tue Feb  7 12:19:20 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 int     enter_text(char chr, int x, char *str, int c)
 {

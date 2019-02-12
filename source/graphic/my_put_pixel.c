@@ -11,7 +11,7 @@
 #include <SFML/Graphics/RenderWindow.h>
 #include <SFML/Graphics/Sprite.h>
 #include <SFML/Graphics/Texture.h>
-#include "../include/my.h"
+#include "my.h"
 
 void	my_put_pixel(t_my_framebuffer *framebuffer,
 		     int x, int y, sfColor color)

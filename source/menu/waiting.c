@@ -8,7 +8,7 @@
 ** Last update Thu Feb  9 12:33:51 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void            waiting_screen_multi(sfRenderWindow *window,
                                      t_my_framebuffer *framebuffer, t_socket *socket)

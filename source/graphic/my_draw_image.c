@@ -8,7 +8,7 @@
 ** Last update Sun Feb  5 16:53:08 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 int	my_get_color(char *str, int min)
 {

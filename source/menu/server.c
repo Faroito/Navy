@@ -8,7 +8,7 @@
 ** Last update Tue Feb  7 12:50:14 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void		choose_guest_color(sfRenderWindow *window,
 				   t_my_framebuffer *framebuffer, t_socket *socket)

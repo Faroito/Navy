@@ -8,7 +8,7 @@
 ** Last update Thu Feb  2 23:47:30 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 t_my_framebuffer	*my_framebuffer_create(int width, int height)
 {

@@ -8,7 +8,7 @@
 ** Last update Tue Feb  7 12:49:00 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void	my_send(int sock, char *msg)
 {

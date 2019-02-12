@@ -8,53 +8,57 @@
 ## Last update Mon Mar  6 14:48:54 2017 Timothée Couble
 ##
 
-SRC		=	graphic/my_draw_image.c		\
-			graphic/my_framebuffer.c	\
-			graphic/my_draw_ships.c		\
-			graphic/my_draw_pos_ships.c	\
-			graphic/my_put_pixel.c		\
-			singleplayer/singleplayer.c	\
-			singleplayer/init_single.c	\
-			singleplayer/ai.c               \
-			multiplayer/multiplayer.c	\
-			multiplayer/socket.c		\
-			functions/my_put_maps.c		\
-			functions/my_update_ships.c	\
-			functions/error.c		\
-			functions/generator.c		\
-			functions/lib_ai.c		\
-			functions/my_convert.c		\
-			functions/my_put_ship.c         \
-			menu/position.c			\
-			menu/menu_multi.c		\
-			menu/client.c			\
-			menu/server.c			\
-			menu/waiting.c			\
-			menu/end_screen.c		\
-			menu/menu.c
+SRC		=	$(addprefix source/,		\
+			$(addprefix graphic/,		\
+				my_draw_image.c			\
+				my_framebuffer.c		\
+				my_draw_ships.c			\
+				my_draw_pos_ships.c		\
+				my_put_pixel.c)			\
+			$(addprefix singleplayer/,	\
+				singleplayer.c			\
+				init_single.c			\
+				ai.c)					\
+			$(addprefix multiplayer/,	\
+				multiplayer.c			\
+				socket.c)				\
+			$(addprefix functions/,		\
+				my_put_maps.c			\
+				my_update_ships.c		\
+				error.c					\
+				generator.c				\
+				lib_ai.c				\
+				my_convert.c			\
+				my_put_ship.c)			\
+			$(addprefix menu/,			\
+				position.c				\
+				menu_multi.c			\
+				client.c				\
+				server.c				\
+				waiting.c				\
+				end_screen.c			\
+				menu.c))
 
 OBJ		=       $(SRC:.c=.o)
 
-CFLAGS          +=      -W -Wall -Wextra -pedantic
+CFLAGS	+=	-Wall -Wextra -pedantic -Wno-deprecated-declarations
 
-NAME		=       navy
+CPPFLAGS	+=	-Iinclude/
 
-RM		=       rm -f
+NAME	=	navy
 
-GCC		=       gcc -o
-
-LIB		=       -lcsfml-window -lcsfml-system -lcsfml-audio -lcsfml-graphics -lm
+LDLIBS	=	-lcsfml-window -lcsfml-system -lcsfml-audio -lcsfml-graphics -lm
 
 all:    $(NAME)
 
 $(NAME):        $(OBJ)
-	$(GCC) $(NAME) $(OBJ) $(LIB) $(CFLAGS)
+	$(CC) -o $(NAME) $(OBJ) $(CPPFLAGS) $(LDLIBS)
 
 clean:
-	$(RM) $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 re:     fclean all
 

@@ -8,7 +8,7 @@
 ** Last update Wed Feb  8 13:26:38 2017 Nathan MICHEL
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 char	*to_char(char *str, sfVector2i pos)
 {

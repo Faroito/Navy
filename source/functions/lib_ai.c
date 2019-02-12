@@ -8,7 +8,7 @@
 ** Last update Sun Feb  5 15:14:05 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void	convert_nbr(t_data *data)
 {

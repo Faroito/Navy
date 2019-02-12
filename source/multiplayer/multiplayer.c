@@ -8,7 +8,7 @@
 ** Last update Mon Feb 13 12:58:15 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void		multi_attack(t_my_framebuffer *framebuffer, sfRenderWindow *window,
 			     t_maps *maps, t_ships **ships,

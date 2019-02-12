@@ -8,7 +8,7 @@
 ** Last update Mon Feb  6 16:24:20 2017 Timothée Couble
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 void	       change_position(t_my_framebuffer *framebuffer, sfRenderWindow *window,
 			       t_ships **ships, int i, char **map, char color)
